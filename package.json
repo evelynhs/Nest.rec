@@ -2,10 +2,14 @@
   "name": "nest.rec",
   "version": "1.0.0",
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "index.html",
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
