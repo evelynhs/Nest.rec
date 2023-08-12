@@ -12,12 +12,16 @@ const Footer = () => {
         <Typography
           variant="h4"
           align={'center'}
+          margin={'6%'}
           sx={{
             fontWeight: 'medium',
           }}
-          margin={'5%'}
         >
-          didn't answer your question? start a pull request at <a href="https://evelynhs.github.com/Nest.rec" target="_blank">evelynhs.github.com/Nest.rec</a>
+          Want to see more projects? Check out our websites at <a href="https://github.com/evelynhs" target="_blank">
+            github.com/evelynhs
+          </a> or <a href="https://github.com/paulresmer" target="_blank">
+            github.com/paulresmer
+          </a>
         </Typography>
       </Box>
       <Box

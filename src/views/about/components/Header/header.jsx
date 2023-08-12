@@ -14,13 +14,13 @@ const Headline = () => {
         color={'textSecondary'}
         align={'center'}
       >
-      
+        about
       </Typography>
       <Typography variant="h2" align={'center'} fontWeight={700} gutterBottom>
-        about us
+        about Nest.rec
       </Typography>
       <Typography variant="h6" align={'center'} color={'textSecondary'}>
-        about the developers
+        what is Nest.rec?
       </Typography>
     </Box>
   );

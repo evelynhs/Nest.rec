@@ -55,7 +55,7 @@ const Content = () => {
         <FaqGroupItem
           items={[
             {
-              title: 'How do I access my Nest camera from Nest.rec?',
+              title: 'how do I access my Nest camera from Nest.rec?',
               subtitle:
                 'Nest RTSP is a tool that enables this functionality. check it out at https://hub.docker.com/r/jakguru/nest-rtsp',
             },

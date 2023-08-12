@@ -3,7 +3,9 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '../../components/container'
 import Main from '../../layouts/Main';
-import Header from './components/Header'
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 const About = () => {
   const theme = useTheme();
@@ -26,12 +28,12 @@ const About = () => {
         </Box>
 
         <Container maxWidth={800}>
-          {/* <Content /> */}
+          <Content />
         </Container>
-        
+
         <Box bgcolor={theme.palette.alternate.main}>
           <Container>
-            {/* <Footer /> */}
+            <Footer />
           </Container>
         </Box>
       </Box>
