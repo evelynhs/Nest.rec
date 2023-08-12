@@ -2,9 +2,11 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-import Main from 'layouts/Main';
-import Container from 'components/Container';
-import { Content, Footer, Header } from './components';
+import Main from '../../layouts/Main';
+import Container from './components/Container';
+import Content from './components/Content';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const Faq = () => {
   const theme = useTheme();

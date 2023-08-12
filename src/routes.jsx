@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes as ReactRoutes, Route, Navigate } from 'react-router-dom';
-import viewsRoutes from 'views/routes';
+import viewsRoutes from './viewsroutes';
 
 const Routes = () => {
   return (
