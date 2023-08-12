@@ -3,7 +3,13 @@ import mediapipe as mp
 
 
 cap = cv.VideoCapture(0)
-
+while cap.isOpened():
+    ret, frame = cap.read()
+    cv.imshow("window", frame)
+    if cv.waitKey(1) and 0xFF == ord("q"):
+        break
+cap.release()
+cv.destroyAllWindows()
 
 bo = mp.tasks.BaseOptions
 pl = mp.tasks.vision.PoseLandmarker
@@ -26,10 +32,3 @@ options = plo(
 
 with pl.create_from_options(options) as landmarker:
     detection_result = landmarker.detect(cap)
-    while cap.isOpened():
-        ret, frame = cap.read()
-        cv.imshow("window", detection_result)
-        if cv.waitKey(1) and 0xFF == ord("q"):
-            break
-    cap.release()
-    cv.destroyAllWindows()

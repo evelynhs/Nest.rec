@@ -6,7 +6,7 @@ import Faq from './views/faq'
 
 const routes = [
   {
-    path: '/stream',
+    path: '/',
     renderer: (params = {}) => <Stream {...params} />,
   },
   {
