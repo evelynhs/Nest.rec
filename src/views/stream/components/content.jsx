@@ -45,6 +45,7 @@ const Content = () => {
       <Box marginBottom={6} align="center">
 
       <img src="http://127.0.0.1:5000/video" width='80%' />
+      <p src= "http://127.0.0.1:5000/logs" />
       </Box>
     </Box>
   );

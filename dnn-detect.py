@@ -14,8 +14,9 @@ VisionRunningMode = mp.tasks.vision.RunningMode
 camera = cv.VideoCapture(0)  # VIDEO INPUT: WEBCAM. ADJUST FOR RTSP FUNCTIONALITY
 
 
+
 # Create a pose landmarker instance with the live stream mode:
-def print_result(
+def return_result(
     result: PoseLandmarkerResult, output_image: mp.Image, timestamp_ms: int
 ):
     print("pose landmarker result: {}".format(result))
@@ -24,7 +25,7 @@ def print_result(
 options = PoseLandmarkerOptions(
     base_options=BaseOptions(model_asset_path="pose_landmarker_lite.task"),
     running_mode=VisionRunningMode.LIVE_STREAM,
-    result_callback=print_result,
+    result_callback=return_result,
 )
 
 # ret, frame = cap.read()
@@ -66,6 +67,11 @@ def index():
 def video():
     return Response(
         generate_frames(), mimetype="multipart/x-mixed-replace; boundary=frame"
+    )
+
+@app.route("/logs")
+def logs():
+    return Response(
     )
 
 
