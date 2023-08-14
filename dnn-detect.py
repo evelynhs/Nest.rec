@@ -1,7 +1,7 @@
 import cv2 as cv
 import mediapipe as mp
 import time
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
 
 app = Flask(__name__, template_folder="../Nest.rec")
 
@@ -13,13 +13,14 @@ VisionRunningMode = mp.tasks.vision.RunningMode
 
 camera = cv.VideoCapture(0)  # VIDEO INPUT: WEBCAM. ADJUST FOR RTSP FUNCTIONALITY
 
+res = []
 
 
 # Create a pose landmarker instance with the live stream mode:
 def return_result(
     result: PoseLandmarkerResult, output_image: mp.Image, timestamp_ms: int
 ):
-    print("pose landmarker result: {}".format(result))
+    res.append("pose landmarker result: {}".format(result))
 
 
 options = PoseLandmarkerOptions(
@@ -69,10 +70,10 @@ def video():
         generate_frames(), mimetype="multipart/x-mixed-replace; boundary=frame"
     )
 
+
 @app.route("/logs")
 def logs():
-    return Response(
-    )
+    return Response(jsonify(res))
 
 
 if __name__ == "__main__":
