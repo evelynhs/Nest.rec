@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '../../components/container'
 import Main from '../../layouts/Main';
+import Content from './components/content'
 
 const Stream = () => {
   const theme = useTheme();
@@ -19,10 +20,11 @@ const Stream = () => {
         >
           <Container>
             {/* <Header /> */}
+
           </Container>
         </Box>
         <Container maxWidth={800}>
-          {/* <Content /> */}
+          <Content />
         </Container>
         <Box bgcolor={theme.palette.alternate.main}>
           <Container>
