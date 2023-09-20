@@ -1,8 +1,22 @@
-# React + Vite
+# Nest.rec
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A security app that uses AI to recognize and log detected human figures.
 
-Currently, two official plugins are available:
+Compatible with Google Nest®.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running the App Locally
+
+This app runs on Node.js. You can find instructions on how to install it [here](http://www.nodejs.org/download/).
+
+Once installed, clone this repository and install its dependencies using $npm install .
+
+### Integration with Google Nest®
+
+https://developers.google.com/nest/device-access/api/camera
+
+See Google's guide to device access within Google's Developer Tools. 
+
+### Nest RTSP
+
+Nest RTSP is a tool developed by jakguru. The documentation is excellent, and it is available here:
+https://gitlab.jak.guru/jakg/nest-rtsp
